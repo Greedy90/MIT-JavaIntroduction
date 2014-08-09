@@ -32,20 +32,22 @@ public class Library {
 					System.out.println("Sorry, this book is already borrowed.");
 				else {
 					currBook.rented();
-					System.out.println("You successfully borrowed " + currBook.getTitle());
+					System.out.println("You successfully borrowed "
+							+ currBook.getTitle());
 				}
 				return;
 			}
 		}
 		System.out.println("Sorry, this book is not in our catalog.");
 	}
-	
+
 	private void returnBook(String bookTitle) {
-		for(Book currBook : list) {
+		for (Book currBook : list) {
 			if (currBook.getTitle().equals(bookTitle)) {
 				if (currBook.isBorrowed()) {
 					currBook.returned();
-					System.out.println("You successfully returned " + currBook.getTitle());
+					System.out.println("You successfully returned "
+							+ currBook.getTitle());
 					return;
 				}
 			}
@@ -55,15 +57,15 @@ public class Library {
 
 	private void printAvailableBooks() {
 		boolean isSomething = false;
-		
-		for(Book currBook : list) {
-			if(!currBook.isBorrowed()) {
+
+		for (Book currBook : list) {
+			if (!currBook.isBorrowed()) {
 				System.out.println(currBook.getTitle());
 				isSomething = true;
 			}
 		}
-		
-		if(!isSomething)
+
+		if (!isSomething)
 			System.out.println("No book in catalog");
 	}
 
