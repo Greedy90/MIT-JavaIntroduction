@@ -6,7 +6,7 @@ public class Baby {
 	boolean isMale;
 	int numPoops;
 	Baby[] siblings;
-	
+
 	static int numBabiesMade = 0;
 
 	public Baby(String name, double weight, boolean isMale) {
@@ -29,9 +29,4 @@ public class Baby {
 		numPoops++;
 		System.out.println("Burp...");
 	}
-
-	public static void main(String[] args) {
-		
-	}
-
 }
